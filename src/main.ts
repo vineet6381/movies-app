@@ -10,3 +10,9 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+/*
+  let onDeviceReady = () => { // Ajout Cordova
+    platformBrowserDynamic().bootstrapModule(AppModule).catch(err => console.error(err));
+  };// Ajout Cordova
+  document.addEventListener('deviceready', onDeviceReady, false);// Ajout Cordova
+*/

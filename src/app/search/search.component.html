@@ -1,0 +1,10 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+  <div class="input-group">
+    <label for="search" class="sr-only">Rechercher un film :</label>
+    <input type="text" class="form-control" id="search" formControlName="search" placeholder="Matrix, Titanic,..."
+      required>
+    <div class="input-group-append">
+      <button type="submit" class="btn btn-primary">Rechercher</button>
+    </div>
+  </div>
+</form>

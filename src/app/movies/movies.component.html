@@ -1,0 +1,12 @@
+<ul *ngIf="movies" class="row list-unstyled">
+  <li *ngFor="let movie of movies;" class="col-lg-3 col-md-4 col-sm-6 col-12 mt-4">
+    <div class="card">
+        <img *ngIf="movie.poster_path; else noImageBlock" class="card-img-top" src="https://image.tmdb.org/t/p/w342/{{ movie.poster_path }}" alt="{{ movie.title }}">
+        <ng-template #noImageBlock><img class="card-img-top" src="https://dummyimage.com/342/000000/ffffff.gif&text=default" alt="{{ movie.title }}"></ng-template>
+        <div class="card-body">
+          <h2 class="h5 card-title">{{ movie.title }} ({{ movie.release_date|date:'MMM y' }})</h2>
+          <p class="card-text">{{ movie.overview|slice:0:120 }}...</p>
+          <a [routerLink]="['/movie', movie.id]" class="btn btn-secondary">Voir la fiche du film</a>
+        </div>
+      </div>
+  </li>

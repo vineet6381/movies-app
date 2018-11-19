@@ -1,1 +1,18 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    background-color:white;
+    font-family: Roboto, sans-serif;
+}
+
+main {
+    position: relative;
+}
+
+main ~ * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    background-color: #343a40;
+}
